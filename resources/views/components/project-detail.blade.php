@@ -15,28 +15,28 @@
                 <table class="ui table definition">
                     <tr>
                         <td>Level</td>
-                        <td><div class="ui basic label violet">Easy</div></td>
+                        <td><div class="ui label black">Easy</div></td>
                     </tr>
                     <tr>
                         <td>Tools</td>
                         <td>
-                            <div class="ui basic label pink">CSS</div>
-                            <div class="ui basic label pink">PHP</div>
-                            <div class="ui basic label pink">Pentaho</div>
+                            <div class="ui basic label black">CSS</div>
+                            <div class="ui basic label black">PHP</div>
+                            <div class="ui basic label black">Pentaho</div>
                         </td>
                     </tr>
                     <tr>
                         <td>Reward</td>
                         <td>
-                    <span class="ui violet text">
-                        <i class="icon coins"></i> 2.000
+                    <span class="ui black text">
+                        <i class="icon coins"></i> 200.000
                     </span>
                         </td>
                     </tr>
                     <tr>
                         <td>Deadline</td>
                         <td>
-                            <span class="ui violet text"><i class="icon calendar outline"></i> 14 April</span>
+                            <span class="ui teal text"><i class="icon calendar outline"></i> 14 April</span>
                         </td>
                     </tr>
                 </table>
