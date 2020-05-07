@@ -12,6 +12,17 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Artisan::call('laravolt:admin', ['name' => 'Administrator', 'email' => 'admin@laravolt.dev', 'password' => 'asdf1234'], $this->command->getOutput());
-        factory(\App\Models\Mission::class)->times(100)->create();
+        factory(\App\Models\Mission::class)
+            ->times(100)
+            ->create()->each(function (\App\Models\Mission $mission) {
+
+                $faker = \Faker\Factory::create(config('app.locale'));
+                $tags = [
+                    'php', 'java', 'laravel', 'springboot',
+                    'pentaho', 'camunda', 'bpmn',
+                    'vuejs', 'angular', 'react',
+                ];
+                $mission->syncTags($faker->randomElements($tags, 3));
+            });
     }
 }
