@@ -7,15 +7,6 @@
         "laravel"
     ],
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../laravolt/",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "require": {
         "php": "^7.2.5",
         "fideloper/proxy": "^4.2",
@@ -23,7 +14,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "laravolt/laravolt": "@dev",
+        "laravolt/laravolt": "dev-master",
         "spatie/laravel-tags": "^2.6"
     },
     "require-dev": {
