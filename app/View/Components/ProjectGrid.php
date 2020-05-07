@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Mission;
 use Illuminate\View\Component;
 
 class ProjectGrid extends Component
@@ -23,6 +24,8 @@ class ProjectGrid extends Component
      */
     public function render()
     {
-        return view('components.project-grid');
+        $missions = Mission::query()->orderBy('due_date')->paginate();
+
+        return view('components.project-grid', compact('missions'));
     }
 }

@@ -11,6 +11,6 @@ $factory->define(\App\Models\Mission::class, function (Faker $faker) {
         'reward' => $faker->randomElement([100000, 500000, 1000000]),
         'owner_id' => 1,
         'status' => \App\Enums\MissionStatus::DRAFT,
-        'due_date' => $faker->dateTimeBetween('now', '+1 month'),
+        'due_date' => $faker->dateTimeBetween('+1 day', '+1 month'),
     ];
 });
