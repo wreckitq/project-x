@@ -12,5 +12,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Artisan::call('laravolt:admin', ['name' => 'Administrator', 'email' => 'admin@laravolt.dev', 'password' => 'asdf1234'], $this->command->getOutput());
+        factory(\App\Models\Mission::class)->times(100)->create();
     }
 }
