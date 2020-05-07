@@ -21,7 +21,7 @@ return [
     ],
     'flash' => [
         'attributes' => [
-            'class' => 'black',
+            'class' => 'white',
         ],
         'except' => [],
     ],
