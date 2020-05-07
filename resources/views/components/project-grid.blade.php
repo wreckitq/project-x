@@ -1,7 +1,7 @@
 <div class="ui three stackable cards">
     @foreach($missions as $mission)
         <a href="{{ route('mission.show', $mission) }}" class="ui card">
-            <div class="center aligned content">
+            <div class="center aligned content p-1">
                 <div class="header">{{ $mission->title }}</div>
                 <div class="center aligned description">
                     {{ $mission->excerpt }}
@@ -19,7 +19,7 @@
                     </span>
                 </div>
                 <div class="right floated">
-                    <span class="ui teal text"><i class="icon calendar outline"></i> {{ $mission->due_date->isoFormat('LL') }}</span>
+                    <span class="ui teal text">{{ $mission->due_date->isoFormat('LL') }}</span>
                 </div>
             </div>
         </a>
