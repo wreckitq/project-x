@@ -6,6 +6,25 @@
         </div>
     </div>
     <div class="item">
+        <div class="ui header">Sort By</div>
+        <div class="ui form visible" style="display: block !important;">
+            <div class="grouped fields">
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input type="radio" name="size" value="small" tabindex="0" class="hidden">
+                        <label>Highest Reward</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input type="radio" name="size" value="small" tabindex="0" class="hidden">
+                        <label>Due Date</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
         <div class="ui header">Reward</div>
         <div class="ui form visible" style="display: block !important;">
             <div class="grouped fields">
