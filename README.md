@@ -15,6 +15,7 @@ Most loved place for weekend projects
 - `composer install`
 - `php artisan key:generate`
 - `php artisan storage:link`
+- `php artisan laravolt:link`
 - `php artisan migrate:fresh --seed`
 
 ## How to launch application?
