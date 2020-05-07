@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="ui container">
-        <h1 class="ui header">Dashboard</h1>
+        <x-project-detail></x-project-detail>
     </div>
-
 @endsection

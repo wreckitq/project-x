@@ -1,6 +1,6 @@
 <div class="ui three stackable cards">
     @foreach(range(1,12) as $project)
-        <div class="ui card">
+        <a href="{{ route('mission.show', 1) }}" class="ui card">
             <div class="center aligned content">
                 <div class="header">Perbaikan Halaman Contact Form</div>
                 <div class="center aligned description">
@@ -22,6 +22,6 @@
                     <span class="ui teal text"><i class="icon calendar outline"></i> 14 April</span>
                 </div>
             </div>
-        </div>
+        </a>
     @endforeach
 </div>
