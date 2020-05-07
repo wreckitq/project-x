@@ -14,6 +14,11 @@
     @stack('head')
     {!! Assets::group('laravolt')->css() !!}
     {!! Assets::css() !!}
+    <style>
+        html, body {
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body data-theme="{{ config('laravolt.ui.sidebar_theme') }}" login-theme="{{ config('laravolt.ui.login_theme') }}" class="{{ $bodyClass ?? '' }}">
