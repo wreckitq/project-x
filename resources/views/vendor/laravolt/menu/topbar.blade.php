@@ -2,7 +2,7 @@
     <div class="ui container">
         <div class="item mobile only tablet only" data-role="sidebar-visibility-switcher"><i class="icon sidebar"></i></div>
         <a href="{{ route('home') }}" class="item">
-            @include('laravolt::menu.sidebar_brand')
+            @include('laravolt::components.brand-image', ['class' => 'mini'])
         </a>
         <a href="{{ route('mission.index') }}" class="item">
             <i class="icon compass outline"></i>
