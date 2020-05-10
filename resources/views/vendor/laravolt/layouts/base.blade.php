@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-font-size="small">
 <head>
     <title>@yield('site.title', "Welcome Home") | {{ config('app.name') }}</title>
 
@@ -16,7 +16,7 @@
     {!! Assets::css() !!}
     <style>
         html, body {
-            font-size: 14px;
+            /*font-size: 14px;*/
         }
     </style>
 </head>

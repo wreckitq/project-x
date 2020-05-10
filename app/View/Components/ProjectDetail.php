@@ -2,18 +2,24 @@
 
 namespace App\View\Components;
 
+use App\Models\Mission;
 use Illuminate\View\Component;
 
 class ProjectDetail extends Component
 {
     /**
+     * @var Mission
+     */
+    public $mission;
+
+    /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Mission $mission)
     {
-        //
+        $this->mission = $mission;
     }
 
     /**

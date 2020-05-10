@@ -9,6 +9,7 @@ $factory->define(\App\Models\Mission::class, function (Faker $faker) {
         'title' => $faker->sentence,
         'description' => $faker->paragraphs(5, true),
         'reward' => $faker->randomElement([100000, 500000, 1000000]),
+        'level' => \App\Enums\Level::getRandomKey(),
         'owner_id' => 1,
         'status' => \App\Enums\MissionStatus::DRAFT,
         'due_date' => $faker->dateTimeBetween('+1 day', '+1 month'),

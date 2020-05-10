@@ -2,6 +2,6 @@
 
 @section('content')
     <div class="ui container">
-        <x-project-detail></x-project-detail>
+        <x-project-detail :mission="$mission"></x-project-detail>
     </div>
 @endsection

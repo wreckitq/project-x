@@ -17,10 +17,11 @@ class CreateMissionsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('owner_id');
             $table->unsignedBigInteger('assignee_id')->nullable();
-            $table->string('status', 40)->comment(\App\Enums\MissionStatus::class);
             $table->string('title', 100);
             $table->text('description');
             $table->unsignedInteger('reward');
+            $table->string('level', 40)->comment(\App\Enums\Level::class);
+            $table->string('status', 40)->comment(\App\Enums\MissionStatus::class);
             $table->date('due_date');
             $table->date('completion_date')->nullable();
             $table->timestamps();

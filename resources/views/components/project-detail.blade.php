@@ -1,40 +1,41 @@
 <div class="ui grid">
     <div class="ten wide column">
         <div class="p-1">
-            <h2 class="ui header massive">Perbaikan Halaman Contact Form</h2>
+            <h2 class="ui header massive">{{ $mission->title }}</h2>
+            <div class="p-b-2 m-b-2" style="border-bottom: 10px dotted #333">
+                <span class="ui text black">Diposting oleh {{ $mission->owner->name }} pada {{ $mission->created_at->isoFormat('LLL') }}</span>
+            </div>
             <div class="description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet animi dignissimos eligendi excepturi illum incidunt ipsum iste libero natus nihil nisi quasi, suscipit tempore voluptatum. Deleniti tenetur totam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, at, dolor dolore, ex expedita fuga id illum labore quod recusandae rem repellendus saepe ullam. Autem consequatur laboriosam recusandae soluta temporibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores cumque error excepturi ipsa omnis provident quibusdam quod repellendus, voluptatem. Dolores ducimus ea, hic iste pariatur placeat provident reiciendis vel.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet animi dignissimos eligendi excepturi illum incidunt ipsum iste libero natus nihil nisi quasi, suscipit tempore voluptatum. Deleniti tenetur totam voluptatum?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet animi dignissimos eligendi excepturi illum incidunt ipsum iste libero natus nihil nisi quasi, suscipit tempore voluptatum. Deleniti tenetur totam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, at, dolor dolore, ex expedita fuga id illum labore quod recusandae rem repellendus saepe ullam. Autem consequatur laboriosam recusandae soluta temporibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores cumque error excepturi ipsa omnis provident quibusdam quod repellendus, voluptatem. Dolores ducimus ea, hic iste pariatur placeat provident reiciendis vel.</p>
+                {{ $mission->description }}
             </div>
         </div>
     </div>
     <div class="six wide column">
-        <table class="ui table definition">
+        <table class="ui table mini definition">
             <tr>
                 <td>Level</td>
-                <td><div class="ui label black">Easy</div></td>
+                <td><div class="ui label small black">{{ $mission->level }}</div></td>
             </tr>
             <tr>
                 <td>Tools</td>
                 <td>
-                    <div class="ui basic label black">CSS</div>
-                    <div class="ui basic label black">PHP</div>
-                    <div class="ui basic label black">Pentaho</div>
+                    @foreach($mission->tags as $tag)
+                        <div class="ui basic label small black">{{ $tag->name }}</div>
+                    @endforeach
                 </td>
             </tr>
             <tr>
                 <td>Reward</td>
                 <td>
                     <span class="ui black text">
-                        <i class="icon coins"></i> 200.000
+                        <i class="icon coins"></i> {{ readable_number($mission->reward) }}
                     </span>
                 </td>
             </tr>
             <tr>
                 <td>Deadline</td>
                 <td>
-                    <span class="ui teal text"><i class="icon calendar outline"></i> 14 April</span>
+                    <span class="ui teal text">{{ $mission->due_date->isoFormat('LL') }}</span>
                 </td>
             </tr>
         </table>

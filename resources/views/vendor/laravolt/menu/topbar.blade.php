@@ -1,4 +1,4 @@
-<header class="ui menu small borderless fixed top {{ config('laravolt.ui.options.topbar_inverted') ? 'inverted': '' }}">
+<header class="ui menu borderless fixed top {{ config('laravolt.ui.options.topbar_inverted') ? 'inverted': '' }}">
     <div class="ui container">
         <div class="item mobile only tablet only" data-role="sidebar-visibility-switcher"><i class="icon sidebar"></i></div>
         <a href="{{ route('home') }}" class="item">

@@ -6,9 +6,9 @@ use BenSampo\Enum\Enum;
 
 final class Level extends Enum
 {
-    const HIGH = 'HIGH';
+    const HARD = 'HARD';
 
-    const NORMAL = 'NORMAL';
+    const MEDIUM = 'MEDIUM';
 
-    const LOW = 'LOW';
+    const EASY = 'EASY';
 }

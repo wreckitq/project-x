@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        \Modules\Mission\Providers\MissionServiceProvider::class,
 
         /*
          * Application Service Providers...
