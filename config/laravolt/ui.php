@@ -3,6 +3,7 @@
 return [
     'brand_name' => env('APP_NAME', 'Laravolt'),
     'brand_image' => env('APP_URL').'/img/x.png',
+    'font_size' => 'small',
     'sidebar_theme' => '',
     'animation' => env('APP_URL').'laravolt/lottiefiles/scan.json',
     'login_theme' => false,
