@@ -14,15 +14,11 @@ class Store extends FormRequest
     public function rules()
     {
         return [
-            'owner_id' => ['required'],
-            'assignee_id' => [''],
-            'status' => ['required'],
             'title' => ['required'],
             'description' => ['required'],
-            'reward' => ['required'],
+            'reward' => ['required', 'numeric'],
             'level' => ['required'],
             'due_date' => ['required'],
-            'completion_date' => [''],
         ];
     }
 

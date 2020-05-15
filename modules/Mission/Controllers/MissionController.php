@@ -2,6 +2,7 @@
 
 namespace Modules\Mission\Controllers;
 
+use App\Enums\MissionStatus;
 use Illuminate\Routing\Controller;
 use Modules\Mission\Requests\Store;
 use Modules\Mission\Requests\Update;
@@ -22,7 +23,7 @@ class MissionController extends Controller
 
     public function store(Store $request)
     {
-        Mission::create($request->validated());
+        Mission::create($request->validated() + ['status' => MissionStatus::PUBLISHED, 'owner_id' => auth()->id()]);
 
         return redirect()->back()->withSuccess('Mission saved');
     }
