@@ -2,7 +2,7 @@
 
 namespace App\View\Components;
 
-use App\Models\Mission;
+use Modules\Mission\Models\Mission;
 use Illuminate\View\Component;
 
 class ProjectDetail extends Component

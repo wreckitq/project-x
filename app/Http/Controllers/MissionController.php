@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Mission;
+use Modules\Mission\Models\Mission;
 use Illuminate\Http\Request;
 
 class MissionController extends Controller

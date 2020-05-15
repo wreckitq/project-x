@@ -5,19 +5,12 @@ return [
     /*
      * Example Menu
      */
-    // 'Main Menu' => [
-    //     'menu' => [
-    //         'Menu 1' => [
-    //             'data' => [
-    //                 'icon' => 'circle outline',
-    //             ],
-    //             'menu' => [
-    //                 'Sub Menu 1-1' => ['url' => '#'],
-    //                 'Sub Menu 1-2' => '#', // string value is pointing to url.
-    //                 'Sub Menu 1-3' => '#',
-    //             ],
-    //         ],
-    //         'Menu 2' => ['url' => '#', 'data' => ['icon' => 'circle outline']],
-    //     ],
-    // ],
+    'Explore' => [
+        'menu' => [
+            'Mission' => ['route' => 'mission.index', 'data' => ['icon' => 'compass outline']],
+            'Training' => ['url' => 'test', 'data' => ['icon' => 'dragon']],
+            'Leaderboard' => ['url' => 'test', 'data' => ['icon' => 'award']],
+            'Reward' => ['url' => 'test', 'data' => ['icon' => 'gift']],
+        ],
+    ],
 ];

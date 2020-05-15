@@ -8,14 +8,18 @@ use Illuminate\Support\Str;
 use Laravolt\Support\Traits\AutoFilter;
 use Laravolt\Support\Traits\AutoSearch;
 use Laravolt\Support\Traits\AutoSort;
+use Spatie\Tags\HasTags;
 
 class Mission extends Model
 {
     use AutoSearch, AutoSort, AutoFilter;
+    use HasTags;
 
     protected $table = 'missions';
 
     protected $guarded = [];
+
+    protected $dates = ['due_date', 'completion_date'];
 
     protected $searchableColumns = ["status", "title", "description", "reward", "level"];
 
@@ -32,5 +36,10 @@ class Mission extends Model
     public function getExcerptAttribute()
     {
         return Str::limit($this->description);
+    }
+
+    public function getRewardFormatted()
+    {
+        return Str::limit($this->description, 80);
     }
 }

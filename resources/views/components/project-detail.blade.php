@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="six wide column">
-        <table class="ui table mini definition">
+        <table class="ui table definition">
             <tr>
                 <td>Level</td>
                 <td><div class="ui label small black">{{ $mission->level }}</div></td>

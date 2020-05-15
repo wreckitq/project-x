@@ -1,4 +1,4 @@
-@extends('laravolt::layouts.app-full')
+@extends('laravolt::layouts.app')
 
 @section('content')
     <div class="ui container">

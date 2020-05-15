@@ -9,7 +9,7 @@
             </div>
             <div class="extra content center aligned">
                 @foreach($mission->tags as $tag)
-                <div class="ui basic label mini black">{{ $tag->name }}</div>
+                <div class="ui basic label small black">{{ $tag->name }}</div>
                 @endforeach
             </div>
             <div class="extra content">
