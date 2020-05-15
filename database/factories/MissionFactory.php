@@ -4,7 +4,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(\App\Models\Mission::class, function (Faker $faker) {
+$factory->define(\Modules\Mission\Models\Mission::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
         'description' => $faker->paragraphs(5, true),
