@@ -2,10 +2,7 @@
 
 @section('content')
 
-    <a href="{{ route('modules::mission.index') }}" class="ui button basic">
-        <i class="icon long alternate left arrow"></i>
-        Kembali
-    </a>
+    <x-backlink url="{{ route('modules::mission.index') }}"></x-backlink>
 
     <x-panel title="Edit Mission">
     {!! form()->bind($mission)->put(route('modules::mission.update', $mission->getKey()))->horizontal()->multipart() !!}

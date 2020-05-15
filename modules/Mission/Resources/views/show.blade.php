@@ -2,11 +2,8 @@
 
 @section('content')
 
-    <a href="{{ route('modules::mission.index') }}" class="ui button basic">
-        <i class="icon long alternate left arrow"></i>
-        Kembali
-    </a>
-
+    <x-backlink url="{{ route('modules::mission.index') }}"></x-backlink>
+    
     <x-panel title="Detil Mission">
         <table class="ui table definition">
         <tr><td>Id</td><td>{{ $mission->id }}</td></tr>
