@@ -2,20 +2,13 @@
 
 @section('content')
 
-    <div class="ui secondary menu">
-        <div class="item">
-            <h2>Mission Detail</h2>
-        </div>
-        <div class="right menu">
-            <div class="item">
-                <a href="{{ route('mission.index') }}" class="ui button basic small"><i class="icon angle left"></i>
-                    Back to index
-                </a>
-            </div>
-        </div>
-    </div>
+    <a href="{{ route('modules::mission.index') }}" class="ui button basic">
+        <i class="icon long alternate left arrow"></i>
+        Kembali
+    </a>
 
-    <table class="ui table definition">
+    <x-panel title="Detil Mission">
+        <table class="ui table definition">
         <tr><td>Id</td><td>{{ $mission->id }}</td></tr>
         <tr><td>Owner_Id</td><td>{{ $mission->owner_id }}</td></tr>
         <tr><td>Assignee_Id</td><td>{{ $mission->assignee_id }}</td></tr>
@@ -29,6 +22,7 @@
         <tr><td>Created_At</td><td>{{ $mission->created_at }}</td></tr>
         <tr><td>Updated_At</td><td>{{ $mission->updated_at }}</td></tr>
         <tr><td>Deleted_At</td><td>{{ $mission->deleted_at }}</td></tr>
-    </table>
+        </table>
+    </x-panel>
 
 @stop

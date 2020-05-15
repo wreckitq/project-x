@@ -2,16 +2,12 @@
 
 @section('content')
 
-    <div class="ui secondary menu">
-        <div class="item">
-            <h2>Mission</h2>
-        </div>
-        <div class="right menu">
-            <div class="item">
-                <a href="{{ route('mission.create') }}" class="ui button primary"><i class="icon plus"></i> Add</a>
-            </div>
-        </div>
-    </div>
+
+    <x-titlebar title="Mission">
+        <a href="{{ route('modules::mission.create') }}" class="ui button primary">
+            <i class="icon plus"></i> Tambah
+        </a>
+    </x-titlebar>
 
     {!! $table !!}
 @stop

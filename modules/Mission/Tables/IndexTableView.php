@@ -1,14 +1,20 @@
 <?php
 
-namespace Modules\Mission\TableView;
+namespace Modules\Mission\Tables;
 
 use Laravolt\Suitable\Columns\Numbering;
 use Laravolt\Suitable\Columns\RestfulButton;
 use Laravolt\Suitable\Columns\Text;
 use Laravolt\Suitable\TableView;
+use Modules\Mission\Models\Mission;
 
 class IndexTableView extends TableView
 {
+    public function source()
+    {
+        return Mission::autoSort()->latest()->autoSearch(request('search'))->paginate();
+    }
+
     protected function columns()
     {
         return [
@@ -22,7 +28,7 @@ class IndexTableView extends TableView
             Text::make('level')->sortable(),
             Text::make('due_date')->sortable(),
             Text::make('completion_date')->sortable(),
-            RestfulButton::make('mission'),
+            RestfulButton::make('modules::mission'),
         ];
     }
 }

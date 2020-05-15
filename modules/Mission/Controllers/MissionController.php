@@ -1,20 +1,18 @@
 <?php
 
-namespace Modules\Mission\Http\Controllers;
+namespace Modules\Mission\Controllers;
 
 use Illuminate\Routing\Controller;
-use Modules\Mission\Http\Requests\Store;
-use Modules\Mission\Http\Requests\Update;
+use Modules\Mission\Requests\Store;
+use Modules\Mission\Requests\Update;
 use Modules\Mission\Models\Mission;
-use Modules\Mission\TableView\IndexTableView;
+use Modules\Mission\Tables\IndexTableView;
 
 class MissionController extends Controller
 {
     public function index()
     {
-        $items = Mission::autoSort()->latest()->autoSearch(request('search'))->paginate();
-
-        return (IndexTableView::make($items))->view('mission::index');
+        return IndexTableView::make()->view('mission::index');
     }
 
     public function create()
@@ -26,7 +24,7 @@ class MissionController extends Controller
     {
         Mission::create($request->validated());
 
-        return redirect()->route('mission.index')->withSuccess('Mission saved');
+        return redirect()->back()->withSuccess('Mission saved');
     }
 
     public function show(Mission $mission)
@@ -50,6 +48,6 @@ class MissionController extends Controller
     {
         $mission->delete();
 
-        return redirect()->route('mission.index')->withSuccess('Mission deleted');
+        return redirect()->back()->withSuccess('Mission deleted');
     }
 }

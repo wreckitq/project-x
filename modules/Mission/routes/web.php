@@ -1,6 +1,6 @@
 <?php
 
-use Modules\Mission\Http\Controllers\MissionController;
+use Modules\Mission\Controllers\MissionController;
 
 $router->group(
     [
