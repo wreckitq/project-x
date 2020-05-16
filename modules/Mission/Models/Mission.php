@@ -35,6 +35,14 @@ class Mission extends Model
         return $this->belongsTo(User::class, 'assignee_id')->withDefault();
     }
 
+    public function bidders()
+    {
+        return $this
+            ->belongsToMany(User::class, 'bidding', 'user_id', 'mission_id')
+            ->withTimestamps()
+            ->withPivot('status');
+    }
+
     public function scopeWhereVisible(Builder $query)
     {
         return $query->whereIn('status', [MissionStatus::PUBLISHED]);

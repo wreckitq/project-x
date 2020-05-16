@@ -25,6 +25,13 @@ $factory->afterCreating(Mission::class, function (Mission $mission, Faker $faker
         'vuejs', 'angular', 'react',
     ];
     $mission->syncTags($faker->randomElements($tags, 3));
+
+    $bidders = factory(\App\User::class)->times(3)->create();
+    $mission->bidders()->sync($bidders);
+
+    if (in_array($mission->status, [MissionStatus::ONPROGRESS, MissionStatus::COMPLETED])) {
+        $mission->bidders()->attach($mission->assignee, ['status' => \App\Enums\BidStatus::WIN]);
+    }
 });
 
 $factory->state(
