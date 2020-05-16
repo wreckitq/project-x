@@ -1,6 +1,6 @@
 <div class="ui three stackable cards">
     @foreach($missions as $mission)
-        <a href="{{ route('mission.show', $mission) }}" class="ui card {{ $mission->assignee->is(auth()->user()) ? 'raised' : '' }}">
+        <a href="{{ route('mission.show', $mission) }}" class="ui card {{ $mission->assignee->is(auth()->user()) ? 's-2' : '' }}">
             <div class="center aligned content p-1">
                 <div class="header">{{ $mission->title }}</div>
                 <div class="center aligned description">
