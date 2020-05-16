@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Mission;
 
+use App\Http\Controllers\Controller;
 use Modules\Mission\Models\Mission;
 use Illuminate\Http\Request;
 

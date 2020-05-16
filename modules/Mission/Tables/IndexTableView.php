@@ -2,7 +2,10 @@
 
 namespace Modules\Mission\Tables;
 
+use App\Enums\Level;
+use App\Enums\MissionStatus;
 use Laravolt\Suitable\Columns\Date;
+use Laravolt\Suitable\Columns\Label;
 use Laravolt\Suitable\Columns\Numbering;
 use Laravolt\Suitable\Columns\RestfulButton;
 use Laravolt\Suitable\Columns\Text;
@@ -21,14 +24,19 @@ class IndexTableView extends TableView
         return [
             Numbering::make('No'),
             Text::make('owner.name', 'Owner')->sortable(),
-            Text::make('assignee.name', 'Assignee')->sortable(),
-            Text::make('status')->sortable(),
             Text::make('title')->sortable(),
-            Text::make('excerpt', 'Description')->sortable('description'),
             Text::make('reward')->sortable(),
-            Text::make('level')->sortable(),
+            Label::make('level')->sortable()
+                ->addClass('small')
+                ->addClassIf(Level::HARD, 'black')
+                ->addClassIf(Level::MEDIUM, 'basic black')
+                ->addClassIf(Level::EASY, 'basic'),
+            Label::make('status')->sortable()
+                ->addClass('small basic')
+                ->addClassIf(MissionStatus::PUBLISHED, 'teal')
+                ->addClassIf(MissionStatus::ONPROGRESS, 'orange')
+                ->addClassIf(MissionStatus::COMPLETED, 'black'),
             Date::make('due_date')->sortable(),
-            Date::make('completion_date')->sortable(),
             RestfulButton::make('modules::mission'),
         ];
     }

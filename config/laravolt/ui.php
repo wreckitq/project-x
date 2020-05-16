@@ -22,7 +22,7 @@ return [
     ],
     'flash' => [
         'attributes' => [
-            'class' => 'white',
+            'class' => 'black',
         ],
         'except' => [],
     ],

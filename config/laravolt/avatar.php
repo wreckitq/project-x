@@ -89,7 +89,7 @@ return [
     // 1. Theme name as string: 'colorful'
     // 2. Or array of string name: ['grayscale-light', 'grayscale-dark']
     // 3. Or wildcard "*" to use all defined themes
-    'theme' => ['grayscale-dark'],
+    'theme' => ['black-white'],
 
     // Predefined themes
     // Available theme attributes are:
@@ -102,6 +102,10 @@ return [
         'grayscale-dark' => [
             'backgrounds' => ['#2d3748', '#4a5568', '#718096'],
             'foregrounds' => ['#e2e8f0'],
+        ],
+        'black-white' => [
+            'backgrounds' => ['#000000'],
+            'foregrounds' => ['#FFFFFF'],
         ],
         'colorful' => [
             'backgrounds' => [

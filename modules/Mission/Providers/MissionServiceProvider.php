@@ -27,7 +27,7 @@ class MissionServiceProvider extends BaseServiceProvider
             $menu->system
                 ->add('Mission', route('modules::mission.index'))
                 ->data('icon', 'circle outline')
-                ->active('mission/*');
+                ->active('modules/mission/*');
         });
     }
 }

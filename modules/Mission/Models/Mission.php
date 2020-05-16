@@ -38,7 +38,7 @@ class Mission extends Model
     public function bidders()
     {
         return $this
-            ->belongsToMany(User::class, 'bidding', 'user_id', 'mission_id')
+            ->belongsToMany(User::class, 'bidding', 'mission_id', 'user_id')
             ->withTimestamps()
             ->withPivot('status');
     }
