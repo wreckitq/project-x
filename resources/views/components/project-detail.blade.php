@@ -54,5 +54,11 @@
         @can('cancel-bid', $mission)
             @include('components.mission.cancel-bid', compact('mission'))
         @endcan
+        @if($mission->status === \App\Enums\MissionStatus::ONPROGRESS && $mission->assignee->isNot(auth()->user()))
+            @include('components.mission.onprogress', compact('mission'))
+        @endif
+        @can('complete', $mission)
+            @include('components.mission.completion-form', compact('mission'))
+        @endcan
     </div>
 </div>

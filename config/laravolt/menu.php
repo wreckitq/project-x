@@ -9,8 +9,8 @@ return [
         'menu' => [
             'Mission' => ['route' => 'mission.index', 'data' => ['icon' => 'compass outline']],
             'Training' => ['url' => 'test', 'data' => ['icon' => 'dragon']],
-            'Leaderboard' => ['url' => 'test', 'data' => ['icon' => 'award']],
-            'Reward' => ['url' => 'test', 'data' => ['icon' => 'gift']],
+            'Leaderboard' => ['url' => 'test', 'data' => ['icon' => 'chess king']],
+            'Reward' => ['url' => 'test', 'data' => ['icon' => 'gifts']],
         ],
     ],
 ];

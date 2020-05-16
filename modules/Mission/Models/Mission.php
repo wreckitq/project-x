@@ -21,7 +21,7 @@ class Mission extends Model
 
     protected $guarded = [];
 
-    protected $dates = ['due_date', 'completion_date'];
+    protected $dates = ['due_date', 'completion_date', 'closed_date'];
 
     protected $searchableColumns = ["status", "title", "description", "reward", "level"];
 
@@ -45,7 +45,7 @@ class Mission extends Model
 
     public function scopeWhereVisible(Builder $query)
     {
-        return $query->whereIn('status', [MissionStatus::PUBLISHED]);
+        return $query->whereIn('status', [MissionStatus::PUBLISHED, MissionStatus::ONPROGRESS]);
     }
 
     public function getExcerptAttribute()

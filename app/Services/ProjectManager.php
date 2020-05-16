@@ -7,6 +7,7 @@ namespace App\Services;
 use App\Enums\BidStatus;
 use App\Enums\MissionStatus;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Modules\Mission\Models\Mission;
 
@@ -53,19 +54,37 @@ class ProjectManager
         });
     }
 
-    public function completeMission(Mission $mission, User $assignee)
+    public function complete(Mission $mission, User $winner)
     {
+        if ($mission->status !== MissionStatus::ONPROGRESS) {
+            throw new \DomainException('Only mission onprogress can be completed');
+        }
+
+        if ($mission->assignee->isNot($winner)) {
+            throw new \DomainException('Only assignee can complete the mission');
+        }
+
+        DB::transaction(function () use ($mission, $winner) {
+            $mission->status = MissionStatus::COMPLETED;
+            $mission->completion_date = Carbon::now();
+            $mission->save();
+        });
     }
 
-    public function closeMission(Mission $mission, User $owner)
+    public function close(Mission $mission, User $owner)
     {
+        if ($mission->status !== MissionStatus::COMPLETED) {
+            throw new \DomainException("Mission {$mission->status} cannot be closed");
+        }
+
+        DB::transaction(function () use ($mission) {
+            $mission->status = MissionStatus::CLOSED;
+            $mission->closed_date = Carbon::now();
+            $mission->save();
+        });
     }
 
-    public function reopenMission(Mission $mission, User $owner)
-    {
-    }
-
-    public function cancelMission(Mission $mission, User $assignee)
+    public function incomplete(Mission $mission, User $owner)
     {
     }
 }

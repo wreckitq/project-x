@@ -24,7 +24,11 @@ class ProjectGrid extends Component
      */
     public function render()
     {
-        $missions = Mission::query()->whereVisible()->orderBy('due_date')->autoSearch(request('q'))->paginate();
+        $query = Mission::query()->whereVisible()->orderBy('due_date')->autoSearch(request('q'));
+        if (request('show') === 'my') {
+            $query->where('assignee_id', auth()->id());
+        }
+        $missions = $query->paginate();
 
         return view('components.project-grid', compact('missions'));
     }

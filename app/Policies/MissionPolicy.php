@@ -57,4 +57,9 @@ class MissionPolicy
 
         return $missionIsPublished;
     }
+
+    public function complete(User $user, Mission $mission)
+    {
+        return $mission->assignee->is($user) && $mission->status === MissionStatus::ONPROGRESS;
+    }
 }

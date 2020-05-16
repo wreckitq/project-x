@@ -13,4 +13,6 @@ final class MissionStatus extends Enum
     const ONPROGRESS = 'ONPROGRESS';
 
     const COMPLETED = 'COMPLETED';
+
+    const CLOSED = 'CLOSED';
 }

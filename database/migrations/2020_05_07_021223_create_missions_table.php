@@ -24,6 +24,7 @@ class CreateMissionsTable extends Migration
             $table->string('status', 40)->comment(\App\Enums\MissionStatus::class);
             $table->date('due_date');
             $table->date('completion_date')->nullable();
+            $table->date('closed_date')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
