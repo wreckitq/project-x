@@ -10,7 +10,7 @@ return [
     'system_menu' => [
         'order' => 99,
     ],
-    'quick_switcher' => true,
+    'quick_switcher' => false,
     'options' => [],
     'themes' => [
         'dark-blue' => [

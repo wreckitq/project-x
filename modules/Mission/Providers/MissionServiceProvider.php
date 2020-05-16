@@ -2,7 +2,6 @@
 
 namespace Modules\Mission\Providers;
 
-use Illuminate\Database\Eloquent\Factory;
 use Laravolt\Support\Base\BaseServiceProvider;
 
 class MissionServiceProvider extends BaseServiceProvider
@@ -27,6 +26,7 @@ class MissionServiceProvider extends BaseServiceProvider
             $menu->system
                 ->add('Mission', route('modules::mission.index'))
                 ->data('icon', 'circle outline')
+                ->data('permission', $this->config['permission'])
                 ->active('modules/mission/*');
         });
     }

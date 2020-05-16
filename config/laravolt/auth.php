@@ -16,8 +16,8 @@ return [
     ],
     'activation'   => [
         'enable'        => true,
-        'status_before' => 'PENDING',
-        'status_after'  => 'ACTIVE',
+        'status_before' => \App\Enums\UserStatus::PENDING,
+        'status_after'  => \App\Enums\UserStatus::ACTIVE,
     ],
     'password' => [
         'forgot' => [
@@ -32,13 +32,6 @@ return [
     ],
     'cas'          => [
         'enable' => false,
-    ],
-    'ldap'         => [
-        'enable'   => false,
-        'resolver' => [
-            'ldap_user'     => \Laravolt\Auth\Services\Resolvers\LdapUserResolver::class,
-            'eloquent_user' => \Laravolt\Auth\Services\Resolvers\EloquentUserResolver::class,
-        ],
     ],
     'router'       => [
         'middleware' => ['web'],
