@@ -7,10 +7,10 @@ return [
      */
     'Explore' => [
         'menu' => [
-            'Mission' => ['route' => 'mission.index', 'data' => ['icon' => 'compass outline']],
-            'Training' => ['url' => 'test', 'data' => ['icon' => 'dragon']],
-            'Leaderboard' => ['url' => 'test', 'data' => ['icon' => 'chess king']],
-            'Reward' => ['url' => 'test', 'data' => ['icon' => 'gifts']],
+            'Mission' => ['route' => 'mission.index', 'data' => ['icon' => 'compass']],
+            'Training' => ['route' => 'training.index', 'data' => ['icon' => 'dragon']],
+            'Player' => ['route' => 'player.index', 'data' => ['icon' => 'user friends']],
+            'Reward' => ['route' => 'reward.index', 'data' => ['icon' => 'gifts']],
         ],
     ],
 ];
