@@ -2,7 +2,9 @@
 
 namespace Modules\Mission\Models;
 
+use App\Enums\MissionStatus;
 use App\User;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Laravolt\Support\Traits\AutoFilter;
@@ -31,6 +33,11 @@ class Mission extends Model
     public function assignee()
     {
         return $this->belongsTo(User::class, 'assignee_id')->withDefault();
+    }
+
+    public function scopeWhereVisible(Builder $query)
+    {
+        return $query->whereIn('status', [MissionStatus::PUBLISHED]);
     }
 
     public function getExcerptAttribute()
