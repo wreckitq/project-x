@@ -15,7 +15,7 @@
     <div class="ui divider hidden"></div>
     {!! form()->post(route('mission.bid', $mission)) !!}
     <button type="submit" class="ui big button black fluid">
-        Make A Bid
+        I Want This
         &nbsp;
         <i class="icon space shuttle"></i>
     </button>

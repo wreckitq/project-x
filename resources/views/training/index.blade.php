@@ -1,9 +1,8 @@
 @extends('laravolt::layouts.app')
 
 @section('content')
-    <div class="p-3">
-        <h2 class="ui header centered huge">🤾‍🐉 Training</h2>
-    </div>
+    <x-titlebar title="🤾‍🐉 Training"></x-titlebar>
+
     <div class="ui container">
         <div class="ui three stackable cards">
             @foreach(range(1, 10) as $i)

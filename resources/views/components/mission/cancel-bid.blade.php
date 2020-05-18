@@ -7,7 +7,7 @@
     </p>
     <div class="ui divider hidden"></div>
     <button class="ui big button fluid disabled">
-        Make A Bid
+        I Want This
         &nbsp;
         <i class="icon space shuttle"></i>
     </button>

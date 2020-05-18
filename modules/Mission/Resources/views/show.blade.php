@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <x-backlink url="{{ route('modules::mission.index') }}"></x-backlink>
+    <x-titlebar title="{{ $mission->title }}">
+        <x-backlink url="{{ route('modules::mission.index') }}" label="Mission"></x-backlink>
+    </x-titlebar>
 
     <x-panel title="Detil Mission">
         <table class="ui table definition">

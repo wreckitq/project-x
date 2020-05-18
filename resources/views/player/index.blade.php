@@ -1,9 +1,7 @@
 @extends('laravolt::layouts.app')
 
 @section('content')
-    <div class="p-3">
-        <h2 class="ui header centered huge">🦸🏽🦸🏼 ‍Player</h2>
-    </div>
+    <x-titlebar title="🦸🏽🦸🏼 ‍Player"></x-titlebar>
 
     @foreach($users as $user)
         <div class="ui segment">
