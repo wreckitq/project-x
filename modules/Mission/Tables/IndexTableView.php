@@ -16,7 +16,7 @@ class IndexTableView extends TableView
 {
     public function source()
     {
-        return Mission::with(['owner', 'assignee'])->autoSort()->latest()->autoSearch(request('search'))->paginate();
+        return Mission::autoSort()->latest()->autoSearch(request('search'))->paginate();
     }
 
     protected function columns()

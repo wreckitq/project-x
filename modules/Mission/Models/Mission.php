@@ -23,6 +23,8 @@ class Mission extends Model
 
     protected $dates = ['due_date', 'completion_date', 'closed_date'];
 
+    protected $with = ['tags', 'owner', 'assignee'];
+
     protected $searchableColumns = ["status", "title", "description", "reward", "level"];
 
     public function owner()
