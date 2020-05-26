@@ -2053,11 +2053,9 @@
                         "Laravolt\\Thunderclap\\ServiceProvider",
                         "Laravolt\\Epilog\\ServiceProvider",
                         "Laravolt\\Menu\\ServiceProvider",
-                        "Laravolt\\Workflow\\ServiceProvider",
                         "Laravolt\\Support\\SupportServiceProvider",
                         "Laravolt\\Suitable\\ServiceProvider",
                         "Laravolt\\Lookup\\ServiceProvider",
-                        "Laravolt\\Camunda\\ServiceProvider",
                         "Laravolt\\Platform\\Providers\\EpicentrumServiceProvider",
                         "Laravolt\\Platform\\Providers\\PlatformServiceProvider",
                         "Laravolt\\Platform\\Providers\\UiServiceProvider",
@@ -2067,7 +2065,6 @@
                     ],
                     "aliases": {
                         "Menu": "Laravolt\\Menu\\Facade",
-                        "Workflow": "Laravolt\\Workflow\\Facade",
                         "Suitable": "Laravolt\\Suitable\\Facade",
                         "Form": "Laravolt\\SemanticForm\\Facade",
                         "SemanticForm": "Laravolt\\SemanticForm\\Facade"
@@ -2081,7 +2078,6 @@
                     "packages/support/src/helpers.php"
                 ],
                 "psr-4": {
-                    "Laravolt\\Camunda\\": "packages/camunda/src",
                     "Laravolt\\Contracts\\": "packages/platform/src/Contracts/",
                     "Laravolt\\Epicentrum\\": "packages/platform/src/Epicentrum/",
                     "Laravolt\\Epilog\\": "packages/epilog/src",
@@ -2093,8 +2089,7 @@
                     "Laravolt\\SemanticForm\\": "packages/semantic-form/src",
                     "Laravolt\\Suitable\\": "packages/suitable/src",
                     "Laravolt\\Support\\": "packages/support/src",
-                    "Laravolt\\Thunderclap\\": "packages/thunderclap/src",
-                    "Laravolt\\Workflow\\": "packages/workflow/src"
+                    "Laravolt\\Thunderclap\\": "packages/thunderclap/src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
