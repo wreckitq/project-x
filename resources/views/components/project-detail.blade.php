@@ -13,40 +13,42 @@
         </div>
     </div>
     <div class="six wide column">
-        <table class="ui table definition">
-            <tr>
-                <td>Level</td>
-                <td><div class="ui label small black">{{ $mission->level }}</div></td>
-            </tr>
-            <tr>
-                <td>Tools</td>
-                <td>
-                    @foreach($mission->tags as $tag)
-                        <div class="ui basic label small black">{{ $tag->name }}</div>
-                    @endforeach
-                </td>
-            </tr>
-            <tr>
-                <td>Reward</td>
-                <td>
+        <x-panel>
+            <table class="ui table definition" style="background-color: transparent">
+                <tr>
+                    <td>Level</td>
+                    <td><div class="ui label small black">{{ $mission->level }}</div></td>
+                </tr>
+                <tr>
+                    <td>Tools</td>
+                    <td>
+                        @foreach($mission->tags as $tag)
+                            <div class="ui basic label small black">{{ $tag->name }}</div>
+                        @endforeach
+                    </td>
+                </tr>
+                <tr>
+                    <td>Reward</td>
+                    <td>
                     <span class="ui black text">
                         <i class="icon coins"></i> {{ readable_number($mission->reward) }}
                     </span>
-                </td>
-            </tr>
-            <tr>
-                <td>Deadline</td>
-                <td>
-                    <span class="ui teal text">{{ $mission->due_date->isoFormat('LL') }}</span>
-                </td>
-            </tr>
-            <tr>
-                <td>Status</td>
-                <td>
-                    {{ $mission->status }}
-                </td>
-            </tr>
-        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Deadline</td>
+                    <td>
+                        <span class="ui teal text">{{ $mission->due_date->isoFormat('LL') }}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>
+                        {{ $mission->status }}
+                    </td>
+                </tr>
+            </table>
+        </x-panel>
 
         @can('bid', $mission)
             @include('components.mission.bid', compact('mission'))

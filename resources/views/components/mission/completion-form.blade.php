@@ -1,4 +1,4 @@
-<div class="ui segment raised padded">
+<x-panel>
     <p>
         Hi {{ auth()->user()->name }}, jika kamu sudah menyelesaikan misi dan merasa pede
         dengan hasilnya, silakan klik tombol di bawah ini.
@@ -10,8 +10,8 @@
     </p>
 
     {!! form()->put(route('mission.complete', $mission)) !!}
-    <button type="submit" class="ui button fluid big secondary">
+    <x-button class="big fluid">
         💪🏼 Complete This Mission
-    </button>
+    </x-button>
     {!! form()->close() !!}
-</div>
+</x-panel>

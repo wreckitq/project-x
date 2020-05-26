@@ -1,4 +1,4 @@
-<div class="ui segment raised padded">
+<x-panel>
     @auth
         <p>Hi {{ auth()->user()->name }}, saat ini <strong>ada {{ $mission->bidders()->count() }} orang</strong> yang
             telah melakukan bidding.</p>
@@ -14,10 +14,10 @@
     </p>
     <div class="ui divider hidden"></div>
     {!! form()->post(route('mission.bid', $mission)) !!}
-    <button type="submit" class="ui big button black fluid">
-        I Want This
-        &nbsp;
-        <i class="icon space shuttle"></i>
-    </button>
+        <x-button class="big fluid">
+            I Want This
+            &nbsp;
+            <i class="icon space shuttle"></i>
+        </x-button>
     {!! form()->close() !!}
-</div>
+</x-panel>

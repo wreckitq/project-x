@@ -1,5 +1,5 @@
 {!! form()->text('title')->label('Title') !!}
-{!! form()->textarea('description')->label('Description') !!}
+{!! form()->redactor('description')->label('Description') !!}
 {!! form()->rupiah('reward')->label('Reward') !!}
 {!! form()->dropdown('level', \App\Enums\Level::toSelectArray())->label('Level') !!}
 {!! form()->datepicker('due_date')->label('Due Date') !!}
