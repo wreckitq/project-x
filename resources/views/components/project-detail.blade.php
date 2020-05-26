@@ -7,7 +7,7 @@
             </div>
             <div class="description">
                 <div class="ui text fluid container">
-                    {{ $mission->description }}
+                    {!! $mission->description !!}
                 </div>
             </div>
         </div>
