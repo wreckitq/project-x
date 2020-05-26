@@ -75,7 +75,7 @@
                     @can('set-winner', $mission)
                         <div class="right floated content">
                             {!! form()->put(route('mission.winner', [$mission, $bidder])) !!}
-                            <button type="submit" class="ui button">Set As Winner</button>
+                            <x-button icon="trophy">Set As Winner</x-button>
                             {!! form()->close() !!}
                         </div>
                     @endcan

@@ -13,4 +13,5 @@ return [
             'Reward' => ['route' => 'reward.index', 'data' => ['icon' => 'gifts']],
         ],
     ],
+
 ];

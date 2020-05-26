@@ -4,9 +4,7 @@
 
     <x-titlebar title="Mission">
         <div class="item">
-            <a href="{{ route('modules::mission.create') }}" class="ui button basic primary">
-                <i class="icon plus"></i> Tambah
-            </a>
+            <x-link label="Tambah" icon="plus" url="{{ route('modules::mission.create') }}"></x-link>
         </div>
     </x-titlebar>
 
