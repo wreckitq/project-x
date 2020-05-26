@@ -1,4 +1,4 @@
-<form>
+<form class="p-1 rounded-xl bg-white-30">
     <div class="ui vertical secondary menu fluid">
         <div class="item">
             <div class="ui left icon input fluid">
@@ -88,7 +88,7 @@
 {{--            </div>--}}
 {{--        </div>--}}
         <div class="item">
-            <button type="submit" class="ui button fluid black">Search</button>
+            <x-button class="fluid">Search</x-button>
         </div>
     </div>
 </form>
