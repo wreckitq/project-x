@@ -50,7 +50,7 @@ class Mission extends Model
 
     public function getExcerptAttribute()
     {
-        return Str::limit($this->description);
+        return Str::limit(strip_tags($this->description));
     }
 
     public function getRewardFormatted()
