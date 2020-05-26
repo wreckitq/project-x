@@ -4,7 +4,7 @@
     <x-titlebar title='🧭 🚀 Mission'></x-titlebar>
 
     <div class="ui container">
-        <div class="ui grid">
+        <div class="ui stackable grid">
             <div class="four wide column">
                 <x-project-filter></x-project-filter>
             </div>

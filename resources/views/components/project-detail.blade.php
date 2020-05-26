@@ -1,4 +1,4 @@
-<div class="ui grid">
+<div class="ui stackable grid">
     <div class="ten wide column">
         <div class="p-2">
             <h2 class="ui header massive">{{ $mission->title }}</h2>
