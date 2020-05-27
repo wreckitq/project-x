@@ -61,12 +61,16 @@
             @can('cancel-bid', $mission)
                 @include('components.mission.cancel-bid', compact('mission'))
             @endcan
-            @if($mission->status === \App\Enums\MissionStatus::ONPROGRESS && $mission->assignee->isNot(auth()->user()))
+            @if(in_array($mission->status, [\App\Enums\MissionStatus::ONPROGRESS, \App\Enums\MissionStatus::COMPLETED]) && $mission->assignee->isNot(auth()->user()))
                 @include('components.mission.onprogress', compact('mission'))
             @endif
             @can('complete', $mission)
                 @include('components.mission.completion-form', compact('mission'))
             @endcan
+            @if($mission->status === \App\Enums\MissionStatus::CLOSED)
+                @include('components.mission.completed', compact('mission'))
+            @endif
+
         </div>
     </div>
 </x-panel>
