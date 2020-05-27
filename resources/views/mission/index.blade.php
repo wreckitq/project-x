@@ -1,16 +1,11 @@
 @extends('laravolt::layouts.app')
 
 @section('content')
-    <x-titlebar title='🧭 🚀 Mission'></x-titlebar>
+    <x-titlebar title='🧭 Mission'></x-titlebar>
 
     <div class="ui container">
-        <div class="ui stackable grid">
-            <div class="four wide column">
-                <x-project-filter></x-project-filter>
-            </div>
-            <div class="twelve wide column">
-                <x-project-grid></x-project-grid>
-            </div>
-        </div>
+        <x-project-filter></x-project-filter>
+        <div class="ui divider m-t-0 m-b-2"></div>
+        <x-project-grid></x-project-grid>
     </div>
 @endsection

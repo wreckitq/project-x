@@ -23,7 +23,7 @@ class MissionServiceProvider extends BaseServiceProvider
     protected function menu()
     {
         app('laravolt.menu.sidebar')->register(function ($menu) {
-            $menu->system
+            $menu->modules
                 ->add('Mission', route('modules::mission.index'))
                 ->data('icon', 'circle outline')
                 ->data('permission', $this->config['permission'])

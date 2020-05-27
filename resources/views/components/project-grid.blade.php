@@ -1,33 +1,42 @@
-<div class="ui three stackable cards">
+@if($missions->isNotEmpty())
+<x-cards class="three stackable">
     @foreach($missions as $mission)
-        <a href="{{ route('mission.show', $mission) }}" class="ui panel segments card {{ $mission->assignee->is(auth()->user()) ? 's-2' : '' }}">
-            <div class="center aligned content p-1">
-                <div class="header">{{ $mission->title }}</div>
-                <div class="center aligned description">
-                    {{ $mission->excerpt }}
+        <x-card
+                url="{{ route('mission.show', $mission) }}"
+                title="{{ $mission->title }}"
+                content="{{ $mission->excerpt }}"
+                meta.before="<i class='icon coins yellow'></i> {{ readable_number($mission->reward) }}"
+        >
+            <x-slot name="body">
+                <div class="extra content">
+                    <x-label color="purple">{{ $mission->level }}</x-label>
+                    @foreach($mission->tags as $tag)
+                        <x-label color="theme">{{ $tag->name }}</x-label>
+                    @endforeach
                 </div>
-            </div>
-            <div class="extra content center aligned">
-                @if($mission->assignee->exists)
-                    <div class="ui red small basic label m-b-1">Assigned</div>
-                @endif
-                @foreach($mission->tags as $tag)
-                <div class="ui basic label small black">{{ $tag->name }}</div>
-                @endforeach
-            </div>
-            <div class="extra content">
-                <div class="left floated">
-                    <span class="ui black text">
-                        <i class="icon coins"></i> {{ readable_number($mission->reward) }}
-                    </span>
-                </div>
-                <div class="right floated">
-                    <span class="ui teal text">{{ $mission->due_date->isoFormat('LL') }}</span>
-                </div>
-            </div>
-        </a>
+            </x-slot>
+            <x-card-footer>
+                <x-slot name="left">
+                    <i class="icon calendar outline"></i> {{ $mission->due_date->diffForHumans() }}
+                </x-slot>
+                <x-slot name="right">
+                    @if($mission->assignee->exists)
+                        <img src="{{ $mission->assignee->avatar }}" alt="" class="ui image avatar mini">
+                    @endif
+                </x-slot>
+            </x-card-footer>
+        </x-card>
     @endforeach
-</div>
+</x-cards>
+@else
+    <div class="ui placeholder segment">
+        <div class="ui icon header">
+            <i class="icon hippo"></i>
+            Opps, nothing found here..
+        </div>
+    </div>
+@endif
+
 
 <div class="ui segment basic center aligned">
     {{ $missions->links() }}

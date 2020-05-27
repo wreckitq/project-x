@@ -1,4 +1,4 @@
-<x-panel>
+<x-panel class="b-0">
     <div class="text-center ui basic segment" style="font-size: 1.25em;">
         <p style="font-style: italic; opacity: .75">
             Sangat menyenangkan bisa bekerja bersama Anan. Komunikasi sangat lancar.

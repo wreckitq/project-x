@@ -4,28 +4,23 @@
     <x-titlebar title="📱💰 Reward"></x-titlebar>
 
     <div class="ui container">
-        <div class="ui three stackable cards">
+        <x-cards class="three">
             @foreach(range(1, 10) as $i)
-                <a href="#" class="ui card link">
-                    <div class="image">
-                        <img src="https://ecs7.tokopedia.net/img/blog/promo/2019/12/tokopoints_kopitiam_gold_catalog_banner_lite_576x192.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <div class="header">Voucher Go-Food Rp 300.000</div>
-                    </div>
-                    <div class="extra content">
-                        <span class="ui text black">
-                        <i class="icon coins"></i>
-                        200K
-                        </span>
-                        <div class="right floated">
-                            <span class="ui text black">
-                                Sisa 10
-                            </span>
-                        </div>
-                    </div>
-                </a>
+                <x-card
+                    url="#"
+                    title="Paket Data 5GB"
+                    cover="https://toko.syarq.com/modules/posslideshows/images/1cbcbf57dddc3fcb58bf785d6245a224b690d24f_Biller%20SyarQ-04.png"
+                >
+
+                    <x-card-footer>
+                        <x-slot name="left">
+                            <i class="icon coins yellow"></i>
+                            200K
+                        </x-slot>
+                        <x-slot name="right">Sisa 10</x-slot>
+                    </x-card-footer>
+                </x-card>
             @endforeach
-        </div>
+        </x-cards>
     </div>
 @endsection

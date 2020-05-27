@@ -1,11 +1,11 @@
-<x-panel>
+<x-panel class="b-0">
     @auth
         <p>Hi {{ auth()->user()->name }}, saat ini <strong>ada {{ $mission->bidders()->count() }} orang</strong> yang
-            telah melakukan bidding.</p>
+            tertarik dengan misi ini.</p>
     @endauth
 
     <p>
-        Jika kamu merasa tertantang untuk menyelesaikan misi ini, segera klik tombol di bawah ya.
+        Jika kamu juga merasa tertantang, segera klik tombol di bawah ya.
         Misi ini akan dipandu oleh <strong>{{ $mission->owner->name }}</strong>. Jadi, jangan takut kalau belum
         menguasai teknologinya.
     </p>

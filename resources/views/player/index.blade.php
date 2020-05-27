@@ -4,7 +4,7 @@
     <x-titlebar title="🦸🏽🦸🏼 ‍Player"></x-titlebar>
 
     @foreach($users as $user)
-        <div class="ui segment">
+        <x-panel>
             <div class="ui grid two equal width">
                 <div class="row">
                     <div class="column">
@@ -19,19 +19,13 @@
                         </div>
                     </div>
                     <div class="column middle aligned">
-                        <div class="ui label basic">
-                            <i class="icon compass"></i>17
-                        </div>
-                        <div class="ui label basic">
-                            <i class="icon dragon"></i>12
-                        </div>
-                        <div class="ui label basic">
-                            <i class="icon coins"></i>100K
-                        </div>
+                        <x-label color="violet"><i class="icon compass"></i>17</x-label>
+                        <x-label color="pink"><i class="icon dragon"></i>12</x-label>
+                        <x-label color="yellow"><i class="icon coins"></i>100K</x-label>
                     </div>
                 </div>
             </div>
-        </div>
+        </x-panel>
     @endforeach
 
     <div class="text-center">

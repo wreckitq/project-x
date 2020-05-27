@@ -28,11 +28,11 @@ class IndexTableView extends TableView
             Text::make('reward')->sortable(),
             Label::make('level')->sortable()
                 ->addClass('small')
-                ->addClassIf(Level::HARD, 'black')
-                ->addClassIf(Level::MEDIUM, 'basic black')
+                ->addClassIf(Level::HARD, 'black solid')
+                ->addClassIf(Level::MEDIUM, 'black')
                 ->addClassIf(Level::EASY, 'basic'),
             Label::make('status')->sortable()
-                ->addClass('small basic')
+                ->addClass('small')
                 ->addClassIf(MissionStatus::PUBLISHED, 'teal')
                 ->addClassIf(MissionStatus::ONPROGRESS, 'orange')
                 ->addClassIf(MissionStatus::COMPLETED, 'black'),
