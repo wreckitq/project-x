@@ -28,6 +28,11 @@
         </x-card>
     @endforeach
 </x-cards>
+
+<div class="ui segment basic center aligned">
+    {{ $missions->links() }}
+</div>
+
 @else
     <div class="ui placeholder segment">
         <div class="ui icon header">
@@ -36,8 +41,3 @@
         </div>
     </div>
 @endif
-
-
-<div class="ui segment basic center aligned">
-    {{ $missions->links() }}
-</div>

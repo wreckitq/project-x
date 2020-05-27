@@ -13,7 +13,7 @@
             <div class="item">
                 <x-button class="fluid">Apply Filter</x-button>
             </div>
-            @if(request()->getQueryString())
+            @if(collect(request()->query())->except('page')->isNotEmpty())
                 <div class="item">
                     <a href="{{ route('mission.index') }}"><i class="icon remove"></i> Clear Filter</a>
                 </div>
