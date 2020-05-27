@@ -1,6 +1,6 @@
 <x-panel class="b-0">
     <p class="ui message info blue b-0">
-        Hi Bayu Hendra, permintaanmu untuk ambil bagian dalam misi ini sedang diproses.
+        Hi {{ auth()->user()->name }}, permintaanmu untuk ambil bagian dalam misi ini sedang diproses.
     </p>
     <p>
         Pejuang yang terpilih akan dihubungi secara personal. Ditunggu ya.
