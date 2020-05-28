@@ -25,7 +25,7 @@ class Mission extends Model
 
     protected $with = ['tags', 'owner', 'assignee'];
 
-    protected $searchableColumns = ["status", "title", "description", "reward", "level"];
+    protected $searchableColumns = ["status", "title", "description", "level"];
 
     public function owner()
     {
