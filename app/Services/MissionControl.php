@@ -11,7 +11,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Modules\Mission\Models\Mission;
 
-class ProjectManager
+class MissionControl
 {
     public function bid(Mission $mission, User $bidder)
     {
