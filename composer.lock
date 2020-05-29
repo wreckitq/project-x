@@ -1971,12 +1971,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravolt/laravolt.git",
-                "reference": "84a90234ea2f54fb49eadd6210a3a126967bffd2"
+                "reference": "8e49ee07bdc33dff357e27ab82c0e89329081f76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravolt/laravolt/zipball/84a90234ea2f54fb49eadd6210a3a126967bffd2",
-                "reference": "84a90234ea2f54fb49eadd6210a3a126967bffd2",
+                "url": "https://api.github.com/repos/laravolt/laravolt/zipball/8e49ee07bdc33dff357e27ab82c0e89329081f76",
+                "reference": "8e49ee07bdc33dff357e27ab82c0e89329081f76",
                 "shasum": ""
             },
             "require": {
