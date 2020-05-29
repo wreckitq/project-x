@@ -14,7 +14,8 @@ $factory->define(Mission::class, function (Faker $faker) {
         'level' => \App\Enums\Level::getRandomKey(),
         'owner_id' => 1,
         'status' => MissionStatus::DRAFT,
-        'due_date' => $faker->dateTimeBetween('+1 day', '+1 month'),
+        'due_date' => $faker->dateTimeBetween('+10 day', '+1 month'),
+        'bid_closed_at' => $faker->dateTimeBetween('+1 day', '+9 day'),
     ];
 });
 
