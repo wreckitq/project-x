@@ -19,6 +19,7 @@ class Store extends FormRequest
             'reward' => ['required', 'numeric'],
             'level' => ['required'],
             'due_date' => ['required'],
+            'bid_closed_at' => ['required'],
             'tags' => [],
         ];
     }

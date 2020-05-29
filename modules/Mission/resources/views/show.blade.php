@@ -41,6 +41,10 @@
                 <td>{{ $mission->level }}</td>
             </tr>
             <tr>
+                <td>Bid Closed At</td>
+                <td>{{ $mission->bid_closed_at->isoFormat('LLLL') }}</td>
+            </tr>
+            <tr>
                 <td>Due Date</td>
                 <td>{{ $mission->due_date->isoFormat('LL') }}</td>
             </tr>

@@ -21,7 +21,7 @@ class Mission extends Model
 
     protected $guarded = [];
 
-    protected $dates = ['due_date', 'completion_date', 'closed_date'];
+    protected $dates = ['due_date', 'completion_date', 'closed_date', 'bid_closed_at'];
 
     protected $with = ['tags', 'owner', 'assignee'];
 
@@ -47,7 +47,7 @@ class Mission extends Model
 
     public function scopeWhereVisible(Builder $query)
     {
-        return $query->whereIn('status', [MissionStatus::PUBLISHED, MissionStatus::ONPROGRESS]);
+        return $query->whereIn('status', [MissionStatus::PUBLISHED, MissionStatus::ONPROGRESS])->whereDate('bid_closed_at', '>=', now());
     }
 
     public function getExcerptAttribute()
@@ -58,5 +58,20 @@ class Mission extends Model
     public function getRewardFormatted()
     {
         return Str::limit($this->description, 80);
+    }
+
+    public function getDisplayDateAttribute()
+    {
+        switch ($this->status) {
+            case MissionStatus::PUBLISHED:
+                return $this->bid_closed_at->diffForHumans();
+            case MissionStatus::ONPROGRESS:
+                return 'Misi sedang berlangsung';
+            case MissionStatus::COMPLETED:
+                return 'Misi sedang direview';
+            case MissionStatus::CLOSED:
+            default:
+                return $this->completed_at->isoFormat('LLL');
+        }
     }
 }

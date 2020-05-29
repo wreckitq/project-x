@@ -17,7 +17,7 @@
             </x-slot>
             <x-card-footer>
                 <x-slot name="left">
-                    <i class="icon calendar outline"></i> {{ $mission->due_date->diffForHumans() }}
+                    <i class="icon calendar outline"></i> {{ $mission->display_date }}
                 </x-slot>
                 <x-slot name="right">
                     @if($mission->assignee->exists)
