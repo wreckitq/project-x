@@ -13,7 +13,7 @@
                                 <img src="{{ Avatar::create($user->name)->toBase64() }}" alt="" class="ui image mini">
                                 <div class="content middle aligned">
                                     <strong>{{ $user->name }}</strong>
-                                    <br>Sragen
+                                    <br>{{ $user->profile->bio ?? '-'}}
                                 </div>
                             </div>
                         </div>

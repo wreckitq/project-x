@@ -8,7 +8,7 @@ class PlayerController extends Controller
 {
     public function index()
     {
-        $users = User::paginate();
+        $users = User::with('profile')->paginate();
 
         return view('player.index', compact('users'));
     }

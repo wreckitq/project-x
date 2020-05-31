@@ -1,1 +1,13 @@
-.ui.pagination.menu{border:0;box-shadow:0 1px 3px rgba(0,0,0,.05)}.ui.pagination.menu .item:before{width:0}.x-mission-filter-form.ui.form .inline.fields{margin-bottom:0}
+.ui.pagination.menu {
+  border: 0 none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.ui.pagination.menu .item:before {
+  width: 0;
+}
+
+.x-mission-filter-form.ui.form .inline.fields {
+  margin-bottom: 0;
+}
+

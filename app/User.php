@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\UserProfile;
 use Illuminate\Notifications\Notifiable;
 use Laravolt\Support\Traits\AutoFilter;
 use Laravolt\Support\Traits\AutoSort;
@@ -22,4 +23,9 @@ class User extends \Laravolt\Platform\Models\User
     ];
 
     protected $fillable = ['name', 'email', 'username', 'password', 'status', 'timezone'];
+
+    public function profile()
+    {
+        return $this->hasOne(UserProfile::class, 'user_id')->withDefault([]);
+    }
 }
