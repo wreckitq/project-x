@@ -15,6 +15,12 @@ class CreateTrainingsTable extends Migration
     {
         Schema::create('trainings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('trainer_id');
+            $table->string('title', 100);
+            $table->text('description');
+            $table->unsignedInteger('fee')->default(0);
+            $table->unsignedInteger('reward')->default(0);
+            $table->dateTime('start_at');
             $table->timestamps();
         });
     }

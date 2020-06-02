@@ -5,27 +5,33 @@
 
     <div class="ui container">
         <x-cards class="three stackable">
-            @foreach(range(1, 10) as $i)
+            @foreach($trainings as $training)
                 <x-card
-                        url="#"
-                        title="Deep Analysis"
-                        content="Studi kasus berbagai macam persoalan yang dihadapi ketika mengembangkan sistem informasi di Indonesia"
-                        meta.after="13 Juni 2020"
-                        cover="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTn2GzRo2cX7vnMstXRLSmKq4EoU6reBzy5dU-ptFaVI26U0S3R&usqp=CAU"
+                        url="{{ route('training.show', $training) }}"
+                        title="{{ $training->title }}"
+                        content="{{ $training->excerpt }}"
+                        meta.after="{{ $training->start_at->isoFormat('LL') }}"
+                        cover="{{ $training->cover }}"
                 >
                     <x-slot name="body">
                         <div class="extra content">
-                            <x-label color="purple">Basic</x-label>
-                            <x-label color="theme">BPMN</x-label>
-                            <x-label color="theme">Analyst</x-label>
+                            @foreach($training->tags as $tag)
+                                <x-label color="theme">{{ $tag->name }}</x-label>
+                            @endforeach
                         </div>
                     </x-slot>
                     <x-card-footer>
                         <x-slot name="left">
-                            <i class='icon coins yellow'></i> 450
+                            <div data-tooltip="Fee {{ $training->fee }}, Reward {{ $training->reward }}" data-position="right center" data-inverted="true">
+                                <i class='icon coins yellow'></i>
+                                {{ $training->fee }}
+                                &nbsp;
+                                <i class="icon gift orange"></i>
+                                {{ $training->reward }}
+                            </div>
                         </x-slot>
                         <x-slot name="right">
-                            <i class="icon microphone alternate"></i> Erikha
+                            <i class="icon microphone alternate"></i> {{ $training->trainer->name }}
                         </x-slot>
                     </x-card-footer>
                 </x-card>
