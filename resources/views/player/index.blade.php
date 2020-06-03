@@ -10,7 +10,7 @@
                     <div class="column">
                         <div class="ui items">
                             <div class="item">
-                                <img src="{{ Avatar::create($user->name)->toBase64() }}" alt="" class="ui image mini">
+                                <img src="{{ $user->avatar }}" alt="" class="ui image mini">
                                 <div class="content middle aligned">
                                     <strong>{{ $user->name }}</strong>
                                     <br>{{ $user->profile->bio ?? '-'}}
