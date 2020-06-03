@@ -17,7 +17,17 @@ mix.env('./.env');
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');
 
-mix.browserSync(process.env.APP_URL);
+mix.browserSync({
+    proxy: process.env.APP_URL,
+    snippetOptions: {
+        rule: {
+            match: /<\/head>/i,
+            fn: function (snippet, match) {
+                return snippet + match;
+            }
+        }
+    }
+});
 
 if (mix.inProduction()) {
     mix.version();

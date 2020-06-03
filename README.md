@@ -19,6 +19,11 @@ Most loved place for weekend projects
 - `php artisan migrate:fresh --seed`
 
 ## How to launch application?
-- `npm install`
-- `npm run watch`
-- atau gunakan web server favorit masing-masing
+- `npm install` + `npm run watch`
+- `php artisan serve` 
+- atau gunakan web server favorit masing-masing 
+
+## Knowing Issues
+- ~~Turbolinks tidak berjalan dengan baik ketika aplikasi dijalankan menggunakan Browsersync (ketika menjalankan `npm run watch`).~~
+    ~~https://github.com/turbolinks/turbolinks/issues/147~~
+
