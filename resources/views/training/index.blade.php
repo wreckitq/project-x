@@ -11,7 +11,6 @@
                         title="{{ $training->title }}"
                         content="{{ $training->excerpt }}"
                         meta.after="{{ $training->start_at->isoFormat('LL') }}"
-                        cover="{{ $training->cover }}"
                 >
                     <x-slot name="body">
                         <div class="extra content">
