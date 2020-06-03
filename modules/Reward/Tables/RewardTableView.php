@@ -2,6 +2,7 @@
 
 namespace Modules\Reward\Tables;
 
+use Laravolt\Suitable\Columns\Number;
 use Laravolt\Suitable\Columns\Numbering;
 use Laravolt\Suitable\Columns\RestfulButton;
 use Laravolt\Suitable\Columns\Text;
@@ -21,8 +22,8 @@ class RewardTableView extends TableView
             Numbering::make('No'),
             Text::make('title')->sortable(),
             Text::make('excerpt')->sortable('description'),
+            Number::make('price')->sortable(),
             Text::make('stock')->sortable(),
-            Text::make('price')->sortable(),
             RestfulButton::make('modules::reward'),
         ];
     }
