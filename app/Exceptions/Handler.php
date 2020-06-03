@@ -68,7 +68,8 @@ class Handler extends ExceptionHandler
     public function render($request, \Throwable $e)
     {
         if ($e instanceof TokenMismatchException) {
-            return back()->withError(__('Kami mendeteksi tidak ada aktivitas cukup lama, silakan ulangi aksi sebelumnya'));
+            return back()
+                ->withError(__('Kami mendeteksi tidak ada aktivitas cukup lama, silakan ulangi aksi sebelumnya'));
         }
 
         if ($e instanceof AuthorizationException) {
