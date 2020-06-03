@@ -167,6 +167,7 @@ return [
          */
         \Modules\Mission\Providers\MissionServiceProvider::class,
         \Modules\Training\Providers\TrainingServiceProvider::class,
+        \Modules\Reward\Providers\RewardServiceProvider::class,
 
         /*
          * Application Service Providers...
