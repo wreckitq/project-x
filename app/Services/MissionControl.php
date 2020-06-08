@@ -64,7 +64,7 @@ class MissionControl
             throw new \DomainException('Only assignee can complete the mission');
         }
 
-        DB::transaction(function () use ($mission, $winner) {
+        DB::transaction(function () use ($mission) {
             $mission->status = MissionStatus::COMPLETED;
             $mission->completion_date = Carbon::now();
             $mission->save();
