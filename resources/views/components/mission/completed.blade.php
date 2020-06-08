@@ -1,5 +1,5 @@
 <x-panel class="b-0">
-    <div class="ui divider horizontal"><i class="icon comments violet"></i></div>
+    <div class="ui divider horizontal"><i aria-hidden="true" class="icon comments violet"></i></div>
     <div class="text-center ui basic segment" style="font-size: 1.25em;">
         <p style="font-style: italic; opacity: .75">
             {{ $mission->remark ?? 'Great Job 👍🏼'}}
@@ -14,6 +14,6 @@
     </div>
     <div class="ui divider hidden"></div>
     <x-link url="{{ route('mission.index') }}" class="fluid big">
-        <i class="icon left long arrow"></i> Explore Misi Lainnya
+        <i aria-hidden="true" class="icon left long arrow"></i> Explore Misi Lainnya
     </x-link>
 </x-panel>

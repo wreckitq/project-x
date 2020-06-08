@@ -19,9 +19,9 @@
                         </div>
                     </div>
                     <div class="column middle aligned">
-                        <x-label color="violet"><i class="icon compass"></i>17</x-label>
-                        <x-label color="pink"><i class="icon dragon"></i>12</x-label>
-                        <x-label color="yellow"><i class="icon coins"></i>100K</x-label>
+                        <x-label color="violet"><i aria-hidden="true" class="icon compass"></i>17</x-label>
+                        <x-label color="pink"><i aria-hidden="true" class="icon dragon"></i>12</x-label>
+                        <x-label color="yellow"><i aria-hidden="true" class="icon coins"></i>100K</x-label>
                     </div>
                 </div>
             </div>

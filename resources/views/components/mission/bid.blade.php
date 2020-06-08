@@ -17,7 +17,7 @@
         <x-button class="big fluid">
             I Want This
             &nbsp;
-            <i class="icon space shuttle"></i>
+            <i aria-hidden="true" class="icon space shuttle"></i>
         </x-button>
     {!! form()->close() !!}
 </x-panel>

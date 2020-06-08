@@ -4,7 +4,7 @@
             <div class="item" style="min-width: 200px">
                 <div class="ui left icon input fluid">
                     <input type="text" name="q" value="{{ request('q') }}" placeholder="Find mission...">
-                    <i class="search icon"></i>
+                    <i aria-hidden="true" class="search icon"></i>
                 </div>
             </div>
             <div class="item">
@@ -15,7 +15,7 @@
             </div>
             @if(collect(request()->query())->except('page')->isNotEmpty())
                 <div class="item">
-                    <a href="{{ route('mission.index') }}"><i class="icon remove"></i> Clear Filter</a>
+                    <a href="{{ route('mission.index') }}"><i aria-hidden="true" class="icon remove"></i> Clear Filter</a>
                 </div>
             @endif
         </div>

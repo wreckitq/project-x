@@ -13,14 +13,14 @@
 
                     <x-card-footer>
                         <x-slot name="left">
-                            <i class="icon coins yellow"></i>
+                            <i aria-hidden="true" class="icon coins yellow"></i>
                             {{ readable_number($reward->price) }}
                         </x-slot>
                         <x-slot name="right">
                             @if($reward->stock)
                                 Sisa {{ $reward->stock }}
                             @else
-                                <i class="icon infinity"></i>
+                                <i aria-hidden="true" class="icon infinity"></i>
                             @endif
                         </x-slot>
                     </x-card-footer>

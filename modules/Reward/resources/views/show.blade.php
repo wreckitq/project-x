@@ -5,7 +5,7 @@
     <x-backlink url="{{ route('modules::reward.index') }}"></x-backlink>
 
     <x-panel title="Detil Reward">
-        <table class="ui table definition">
+        <table class="ui table definition" role="presentation">
         <tr><td>Id</td><td>{{ $reward->id }}</td></tr>
         <tr><td>Title</td><td>{{ $reward->title }}</td></tr>
         <tr><td>Description</td><td>{!! $reward->description !!}</td></tr>

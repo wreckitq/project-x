@@ -5,7 +5,7 @@
             <div class="p-2">
                 <h2 class="ui header massive centered">{{ $mission->title }}</h2>
 
-                <div class="ui divider section horizontal m-b-0"><i class="icon compass violet"></i></div>
+                <div class="ui divider section horizontal m-b-0"><i aria-hidden="true" class="icon compass violet"></i></div>
 
                 <div class="description bg-white-70 p-2">
                     <div class="ui text fluid container">
@@ -13,7 +13,7 @@
                     </div>
                 </div>
 
-                <div class="ui divider section horizontal m-t-0"><i class="icon compass rotated violet"></i></div>
+                <div class="ui divider section horizontal m-t-0"><i aria-hidden="true" class="icon compass rotated violet"></i></div>
 
             </div>
         </div>
@@ -36,14 +36,14 @@
                         <td>Reward</td>
                         <td>
                     <span class="ui black text">
-                        <i class="icon coins yellow"></i> {{ readable_number($mission->reward) }}
+                        <i aria-hidden="true" class="icon coins yellow"></i> {{ readable_number($mission->reward) }}
                     </span>
                         </td>
                     </tr>
                     <tr>
                         <td>Deadline</td>
                         <td>
-                            <span class="ui violet text"><i class="icon calendar outline"></i> {{ $mission->due_date->isoFormat('LL') }}</span>
+                            <span class="ui violet text"><i aria-hidden="true" class="icon calendar outline"></i> {{ $mission->due_date->isoFormat('LL') }}</span>
                         </td>
                     </tr>
                     <tr>

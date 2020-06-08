@@ -22,15 +22,15 @@
                     <x-card-footer>
                         <x-slot name="left">
                             <div data-tooltip="Fee {{ $training->fee }}, Reward {{ $training->reward }}" data-position="right center" data-inverted="true">
-                                <i class='icon coins yellow'></i>
+                                <i aria-hidden="true" class='icon coins yellow'></i>
                                 {{ $training->fee }}
                                 &nbsp;
-                                <i class="icon gift orange"></i>
+                                <i aria-hidden="true" class="icon gift orange"></i>
                                 {{ $training->reward }}
                             </div>
                         </x-slot>
                         <x-slot name="right">
-                            <i class="icon microphone alternate"></i> {{ $training->trainer->name }}
+                            <i aria-hidden="true" class="icon microphone alternate"></i> {{ $training->trainer->name }}
                         </x-slot>
                     </x-card-footer>
                 </x-card>
