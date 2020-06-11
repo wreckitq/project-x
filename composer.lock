@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d64b54304804ad1f257475091631232",
+    "content-hash": "2bc41e924e6d6bbdecb30871de3bfb13",
     "packages": [
         {
             "name": "anhskohbo/no-captcha",
@@ -2401,6 +2401,69 @@
                 "processing"
             ],
             "time": "2019-04-03T23:46:42+00:00"
+        },
+        {
+            "name": "livewire/livewire",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/livewire/livewire.git",
+                "reference": "874ba1b8d6b12efa472147697942fe2f78a5d371"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/874ba1b8d6b12efa472147697942fe2f78a5d371",
+                "reference": "874ba1b8d6b12efa472147697942fe2f78a5d371",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0",
+                "illuminate/support": "~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0",
+                "illuminate/validation": "~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0",
+                "php": "^7.1.3",
+                "symfony/http-kernel": "^4.0|^5.0"
+            },
+            "require-dev": {
+                "laravel/framework": "~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0",
+                "mockery/mockery": "^1.3.1",
+                "orchestra/testbench": "~3.6.0|~3.7.0|~3.8.0|^4.0|^5.0",
+                "phpunit/phpunit": "^7.5.15|^8.4|^9.0",
+                "psy/psysh": "@stable"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Livewire\\LivewireServiceProvider"
+                    ],
+                    "aliases": {
+                        "Livewire": "Livewire\\Livewire"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Livewire\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "A front-end framework for Laravel.",
+            "funding": [
+                {
+                    "url": "https://github.com/calebporzio",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-06-08T15:12:38+00:00"
         },
         {
             "name": "maatwebsite/excel",
@@ -7602,6 +7665,44 @@
             "time": "2016-01-20T08:20:44+00:00"
         },
         {
+            "name": "jasonmccreary/laravel-test-assertions",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jasonmccreary/laravel-test-assertions.git",
+                "reference": "3ead0117ce53d2b64ce6a6caa5db26f2188712ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jasonmccreary/laravel-test-assertions/zipball/3ead0117ce53d2b64ce6a6caa5db26f2188712ae",
+                "reference": "3ead0117ce53d2b64ce6a6caa5db26f2188712ae",
+                "shasum": ""
+            },
+            "require": {
+                "mockery/mockery": "^1.0",
+                "php": ">=7.2",
+                "phpunit/phpunit": "^7.5|^8.0|^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JMac\\Testing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jason McCreary",
+                    "email": "jason@pureconcepts.net"
+                }
+            ],
+            "description": "A set of helpful assertions when testing Laravel applications.",
+            "time": "2020-04-03T15:14:24+00:00"
+        },
+        {
             "name": "maximebf/debugbar",
             "version": "v1.16.3",
             "source": {
@@ -7726,6 +7827,52 @@
                 "testing"
             ],
             "time": "2019-12-26T09:49:15+00:00"
+        },
+        {
+            "name": "mpociot/laravel-test-factory-helper",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mpociot/laravel-test-factory-helper.git",
+                "reference": "4660d6116cf451394343dea7922dc0e9de7e78c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpociot/laravel-test-factory-helper/zipball/4660d6116cf451394343dea7922dc0e9de7e78c0",
+                "reference": "4660d6116cf451394343dea7922dc0e9de7e78c0",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^2.9",
+                "illuminate/console": "^6.0|^7.0",
+                "illuminate/filesystem": "^6.0|^7.0",
+                "illuminate/support": "^6.0|^7.0",
+                "php": "^7.2.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mpociot\\LaravelTestFactoryHelper\\TestFactoryHelperServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mpociot\\LaravelTestFactoryHelper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Generate Laravel test factories from your existing models",
+            "keywords": [
+                "factory",
+                "laravel",
+                "tests"
+            ],
+            "time": "2020-03-02T16:04:35+00:00"
         },
         {
             "name": "nunomaduro/collision",
@@ -9326,7 +9473,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2.5"
+        "php": "^7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
