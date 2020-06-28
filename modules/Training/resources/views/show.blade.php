@@ -5,7 +5,7 @@
     <x-backlink url="{{ route('modules::training.index') }}"></x-backlink>
 
     <x-panel title="Detil Training">
-        <table class="ui table definition">
+        <table class="ui table definition" role="presentation">
         <tr><td>Id</td><td>{{ $training->id }}</td></tr>
         <tr><td>Trainer_Id</td><td>{{ $training->trainer_id }}</td></tr>
         <tr><td>Title</td><td>{{ $training->title }}</td></tr>

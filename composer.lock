@@ -1936,10 +1936,15 @@
         {
             "name": "laravolt/laravolt",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravolt/laravolt.git",
+                "reference": "2c23110781c44e1c58b790bc0dea7eacbc6d60a3"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravolt/laravolt/zipball/b5178c80c3456f06eafc9834fed23c759e01d72a",
-                "reference": "b5178c80c3456f06eafc9834fed23c759e01d72a",
+                "url": "https://api.github.com/repos/laravolt/laravolt/zipball/2c23110781c44e1c58b790bc0dea7eacbc6d60a3",
+                "reference": "2c23110781c44e1c58b790bc0dea7eacbc6d60a3",
                 "shasum": ""
             },
             "require": {

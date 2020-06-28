@@ -30,7 +30,7 @@ class MissionPolicy
     /**
      * Determine whether the user allowed to cancel existing bid.
      *
-     * @param \App\User $user
+     * @param \App\User $bidder
      * @param \Modules\Mission\Models\Mission $mission
      *
      * @return mixed
@@ -46,7 +46,7 @@ class MissionPolicy
     /**
      * Determine whether the user allowed to cancel existing bid.
      *
-     * @param \App\User $user
+     * @param \App\User $bidder
      * @param \Modules\Mission\Models\Mission $mission
      *
      * @return mixed

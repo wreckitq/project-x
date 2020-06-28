@@ -10,7 +10,7 @@
     <x-button class="big fluid disabled secondary">
         I Want This
         &nbsp;
-        <i class="icon space shuttle"></i>
+        <i aria-hidden="true" class="icon space shuttle"></i>
     </x-button>
 
     <div class="text-center m-t-1">

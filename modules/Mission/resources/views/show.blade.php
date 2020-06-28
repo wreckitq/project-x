@@ -7,7 +7,7 @@
     </x-titlebar>
 
     <x-panel title="Detil Mission">
-        <table class="ui table definition">
+        <table class="ui table definition" role="presentation">
             <tr>
                 <td width="200px">URL</td>
                 <td><a href="{{ route('mission.show', $mission) }}">{{ route('mission.show', $mission) }}</a></td>

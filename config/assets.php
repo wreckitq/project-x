@@ -138,6 +138,7 @@ return [
                 'redactor/_plugins/fontcolor/fontcolor.min.js',
                 'redactor/_plugins/table/table.min.js',
                 'redactor/_plugins/specialchars/specialchars.min.js',
+                'redactor/init.js',
             ],
         ],
 

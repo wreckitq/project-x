@@ -3,26 +3,26 @@
 namespace App\Http\Controllers\Mission;
 
 use App\Http\Controllers\Controller;
+use Illuminate\View\View;
 use Modules\Mission\Models\Mission;
-use Illuminate\Http\Request;
 
 class MissionController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return View
      */
     public function index()
     {
         return view('mission.index');
     }
 
-  /**
+    /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Mission $mission
+     *
+     * @return View
      */
     public function show(Mission $mission)
     {

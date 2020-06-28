@@ -5,7 +5,7 @@
                 url="{{ route('mission.show', $mission) }}"
                 title="{{ $mission->title }}"
                 content="{{ $mission->excerpt }}"
-                meta.before="<i class='icon coins yellow'></i> {{ readable_number($mission->reward) }}"
+                meta.before="<i aria-hidden="true" class='icon coins yellow'></i> {{ readable_number($mission->reward) }}"
         >
             <x-slot name="body">
                 <div class="extra content">
@@ -17,7 +17,7 @@
             </x-slot>
             <x-card-footer>
                 <x-slot name="left">
-                    <i class="icon calendar outline"></i> {{ $mission->display_date }}
+                    <i aria-hidden="true" class="icon calendar outline"></i> {{ $mission->display_date }}
                 </x-slot>
                 <x-slot name="right">
                     @if($mission->assignee->exists)
@@ -36,7 +36,7 @@
 @else
     <div class="ui placeholder segment">
         <div class="ui icon header">
-            <i class="icon hippo"></i>
+            <i aria-hidden="true" class="icon hippo"></i>
             Opps, nothing found here..
         </div>
     </div>
