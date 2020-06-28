@@ -1,69 +1,98 @@
 # Project X
-Most loved place for weekend projects
 
-## *Requirements*
+Most loved place for weekend projects.
+
+## _Requirements_
+
 - PHP >= 7.4
 - Laravel 7
 - DBMS (PostgreSQL / MySQL)
 
-## *Installation*
-- *clone this repository*
-- *copy* ***.env.example*** *to* **.env**, setup:
-  - APP_URL
-  - DB_XXX
-### *Setup application*
-    composer install
-    php artisan key:generate
-    php artisan storage:link
-    php artisan laravolt:link
-    php artisan migrate:fresh --seed
+## _Installation_
+
+- _clone this repository_
+- _copy_ **_.env.example_** _to_ **.env**, setup:
+- APP_URL
+- DB_XXX
+
+### _Setup application_
+
+```bash
+composer install
+php artisan key:generate
+php artisan storage:link
+php artisan laravolt:link
+php artisan migrate:fresh --seed
+```
 
 ## Generating assets
-### *NPM user*
-    npm install
-    npm run watch
-### *Yarn user*
+
+### _NPM user_
+
+```bash
+npm install
+npm run watch
+```
+
+### _Yarn user_
+
     yarn install
     yarn run watch
 
-## *Untrack files from versioning (optional)*
-Untuk mempermudah *development*, *exclude* beberapa *file* yang tidak ingin di-*versioning*. Sebagai contoh hasil *generating assets* diatas agar tidak *conflict* dengan yang lain waktu *commit*, jalankan:
+## _Untrack files from versioning (optional)_
 
-    git update-index --skip-worktree public/css/app.css public/js/app.js public/mix-manifest.json
+Untuk mempermudah _development_, _exclude_ beberapa _file_ yang tidak ingin di-_versioning_. Sebagai contoh hasil _generating assets_ diatas agar tidak _conflict_ dengan yang lain waktu _commit_, jalankan:
 
-Untuk *revert (undo)* langkah diatas (menambahkan kembali *files* ke versioning), jalankan:
+```bash
+git update-index --skip-worktree public/css/app.css public/js/app.js public/mix-manifest.json
+```
 
-    git update-index --no-skip-worktree public/css/app.css public/js/app.js public/mix-manifest.json
+Untuk _revert (undo)_ langkah diatas (menambahkan kembali _files_ ke versioning), jalankan:
 
-## *How to launch application*?
-- `php artisan serve`
-- atau gunakan *web server* favorit masing-masing
+```bash
+git update-index --no-skip-worktree public/css/app.css public/js/app.js public/mix-manifest.json
+```
 
-## *Development*
-### *Branch list*
-* `master` -> production
-* `dev` -> belum ada
-* `staging` -> belum ada
-* `hotfix` -> belum ada
+## _How to launch application_?
 
-### *Flow*
-* Setiap *nambah* ***feature/enchanchment*** buat ***branch*** dari `master`.
-* Kalau sudah selesai `merge request` ke `master`, *assign* ke ***LEAD*** buat deploy.
-* Kalau ada *bug* pakai *branch* yang sama, kemudian `merge request` lagi ke `branch master`.
-* *Update* kerjaan anggota lain dengan `merge branch master` ke branch yang dikerjakan setiap sebelum ***push***.
+- ```php artisan serve```
+- atau gunakan _web server_ favorit masing-masing
 
-### Struktur kode saat ngoding
-* `Controller` harus mengandung 7 unsur **pokok** saja (***--resource***), tidak boleh **lebih**!
-* 7 unsur pokok yaitu `index, create, store, show, edit, update` dan `destroy`.
-* Penamaan khusus untuk `view` pake huruf kecil dan strip, contohnya `mission-user`.
-* Yang lainnya penamaannya besar kecil *a.k.a* ***camelCase***.
-* Penamaan `model` dan `controller` harus bahasa inggris ya, soalnya biar *enak* buat bikin penamaan di ORM.
+## _Development_
 
-### *Tips from anyone to everyone*
-#### Install `phpcs` dan `phpcbf`, kalau berat cukup lakukan perintah dibawah ini di `cmd` atau `terminal` favoritmu
-    composer phpcs
-    composer phpcbf
-#### Gunakan *text editor* favoritmu kemudian optimasi, atau gunakan PHPStorm dan pastikan ***legal***, ya!
+### _Branch list_
 
-## *Knowing issues*
-- *Wanna add something?*
+- `master` -> production
+- `dev` -> belum ada
+- `staging` -> belum ada
+- `hotfix` -> belum ada
+
+### _Flow_
+
+- Setiap _nambah_ **_feature/enchanchment_** buat **_branch_** dari `master`.
+- Kalau sudah selesai `merge request` ke `master`, _assign_ ke **_LEAD_** buat deploy.
+- Kalau ada _bug_ pakai _branch_ yang sama, kemudian `merge request` lagi ke `branch master`.
+- _Update_ kerjaan anggota lain dengan `merge branch master` ke branch yang dikerjakan setiap sebelum **_push_**.
+
+### Struktur kode saat _coding_
+
+- `Controller` harus mengandung ***7 unsur pokok*** saja (**_--resource_**), tidak boleh **lebih**!
+- 7 unsur pokok yaitu `index, create, store, show, edit, update` dan `destroy`.
+- Kalo pakai *controller* dengan satu *function* jangan lupa menggunakan *__invoke*
+- Penamaan khusus untuk `view` pake huruf kecil dan strip, contohnya `mission-user`.
+- Yang lainnya penamaannya besar kecil _a.k.a_ **_camelCase_**.
+- Penamaan `model` dan `controller` harus bahasa inggris ya, soalnya biar _enak_ buat bikin penamaan di ORM.
+
+### _Tips from anyone to everyone_
+
+#### Pastikan *code*-mu memenuhi _standart_ dan _readable buat yang lain ya, bisa gunakan perintah dibawah ini:
+
+```bash
+php artisan insights
+```
+
+#### Gunakan PHPStorm untuk mempermudah _development_ atau bisa juga _text editor_ yang lain sesuai selera!
+
+## _Knowing issues_
+
+- _Wanna add something?_
