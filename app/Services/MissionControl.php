@@ -45,7 +45,7 @@ class MissionControl
             throw new \DomainException('Only PUBLISHED mission can set a winner');
         }
 
-        DB::transaction(function() use ($mission, $winner) {
+        DB::transaction(function () use ($mission, $winner) {
             $mission->assignee()->associate($winner);
             $mission->status = MissionStatus::ONPROGRESS;
             $mission->save();
@@ -86,5 +86,6 @@ class MissionControl
 
     public function incomplete(Mission $mission, User $owner)
     {
+        //
     }
 }

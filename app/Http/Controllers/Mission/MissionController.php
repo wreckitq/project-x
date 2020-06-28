@@ -31,10 +31,11 @@ class MissionController extends Controller
 
     public function bid()
     {
+        //
     }
 
     public function cancelBid()
     {
-        //....
+        //
     }
 }
